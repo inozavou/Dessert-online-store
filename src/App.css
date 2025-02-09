@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Text", serif;
+  color: hsl(14, 65%, 9%);
+  background-color: hsl(13, 31%, 94%);
+  display: flex;
+  justify-content: center;
+}
+
+/*DESSERT SECTION*/
+h1 {
+  margin-left: 50px;
+}
+
+.app {
+  display: flex;
+  min-width: 900px;
+  max-width: 900px;
+  margin-top: 20px;
+  background-color: hsl(13, 31%, 94%);
+  justify-content: center;
+}
+.dessert-section {
+  flex: 2;
+}
+
+.dessert-container {
+  position: relative;
+  padding-left: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1 fr 1 fr 1 fr;
+}
+
+.dessert {
+  position: relative;
+  padding: 10px;
+  display: flexbox;
+  flex-direction: column;
+}
+
+.dessert-image {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.addToCart-icon {
+  width: 13px;
+}
+.dessert-info {
+  padding: 10px;
+}
+.dessert-category {
+  font-size: 9px;
+  color: hsl(14, 17%, 44%);
+  font-weight: 400;
+}
+.dessert-title {
+  font-size: 12px;
+  color: hsl(14, 65%, 9%);
+  font-weight: 700;
+}
+.dessert-price {
+  font-size: 10px;
+  color: hsl(14, 86%, 42%);
+  font-weight: 600;
+}
+
+/* BUTTONS */
+button {
+  align-items: center;
+  font-size: 10px;
+  color: hsl(14, 65%, 9%);
+  height: 20px;
+  width: 100px;
+}
+.add-to-cart-button {
+  position: absolute;
+  bottom: 90px;
+  left: 35px;
+  font-weight: 600;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 40px;
+  border: 1px solid hsl(7, 20%, 60%);
+}
+.quantity-controls {
+  position: absolute;
+  bottom: 90px;
+  left: 35px;
+  width: 100px;
+  height: 20px;
+  font-size: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
+  background-color: hsl(14, 86%, 42%);
+  border-radius: 20px;
+}
+
+.decrease-quantity-button,
+.increase-quantity-button,
+.close-button {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background-color: hsl(14, 86%, 42%);
+  font-weight: 600;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+.close-button {
+  margin-left: 280px;
+}
+
+/*CART SECTION*/
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-width: 300px;
+  height: 400px;
+  min-height: 300px;
+  max-height: 1500px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  align-items: center;
+  overflow: auto;
+}
+.cart-header {
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+}
+.cart-items {
+  display: flex;
+  min-height: 200px;
+}
+
+.confirm-order-button,
+.start-new-order-button {
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(13, 31%, 94%);
+  border-radius: 40px;
+  border: none;
+  font-weight: 400;
+  min-width: 200px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.selected-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.selected-item-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.selected-item-price {
+  font-size: 12px;
+  color: hsl(7, 20%, 60%);
+  margin-left: 70px;
+}
+
+.selected-item-quantity {
+  font-size: 12px;
+  color: hsl(14, 86%, 42%);
+}
+
+.total {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.order-total {
+  font-size: 13px;
+  align-items: center;
+}
+.total-amount {
+  margin-left: 50px;
+}
+
+.carbon-neutral-box {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(13, 31%, 94%);
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+}
+
+.carbon-neutral-text {
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.carbon-neutral-icon {
+  width: 15px;
+  margin-left: 15px;
+}
+
+.cart-bottom-section {
+  align-items: center;
+}
+
+.empty-cart-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-empty-cart {
+  width: 100px;
+}
+.text-empty-cart {
+  font-size: 10px;
+}
+
+/* MODAL */
+.modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 300px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+.order-items {
+  background-color: hsl(13, 31%, 94%);
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.icon-order-confirmed {
+  width: 20px;
+}
+.modal-enjoy-food-message {
+  font-size: 10px;
+  color: hsl(7, 20%, 60%);
+}
+.modal-thumbnail {
+  width: 40px;
+}
