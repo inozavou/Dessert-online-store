@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Red Hat Text", serif;
   color: hsl(14, 65%, 9%);
@@ -15,59 +19,84 @@ body {
 
 /*DESSERT SECTION*/
 h1 {
-  margin-left: 50px;
+  margin-left: 5rem;
 }
 
 .app {
   display: flex;
-  min-width: 900px;
-  max-width: 900px;
-  margin-top: 20px;
+  flex-wrap: nowrap;
+  max-width: 90rem;
+  margin-top: 2rem;
   background-color: hsl(13, 31%, 94%);
   justify-content: center;
 }
+
+@media (max-width: 90rem) {
+  .app {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
 .dessert-section {
   flex: 2;
 }
 
 .dessert-container {
   position: relative;
-  padding-left: 40px;
+  padding-left: 4rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1 fr 1 fr 1 fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+@media (max-width: 50rem) {
+  .dessert-container {
+    display: grid;
+    padding-left: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+  .dessert-container {
+    display: grid;
+    padding-left: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .dessert {
   position: relative;
-  padding: 10px;
+  padding: 1rem;
   display: flexbox;
   flex-direction: column;
 }
 
 .dessert-image {
-  width: 150px;
-  border-radius: 10px;
+  width: 15rem;
+  border-radius: 1rem;
 }
 
 .addToCart-icon {
-  width: 13px;
+  width: 1.3rem;
 }
 .dessert-info {
-  padding: 10px;
+  padding: 1rem;
 }
 .dessert-category {
-  font-size: 9px;
+  font-size: 0.9rem;
   color: hsl(14, 17%, 44%);
   font-weight: 400;
 }
 .dessert-title {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: hsl(14, 65%, 9%);
   font-weight: 700;
 }
 .dessert-price {
-  font-size: 10px;
+  font-size: 1rem;
   color: hsl(14, 86%, 42%);
   font-weight: 600;
 }
@@ -75,49 +104,49 @@ h1 {
 /* BUTTONS */
 button {
   align-items: center;
-  font-size: 10px;
+  font-size: 1rem;
   color: hsl(14, 65%, 9%);
-  height: 20px;
-  width: 100px;
+  height: 2rem;
+  width: 10rem;
 }
 .add-to-cart-button {
   position: absolute;
-  bottom: 90px;
-  left: 35px;
+  bottom: 9rem;
+  left: 3.5rem;
   font-weight: 600;
   background-color: hsl(20, 50%, 98%);
-  border-radius: 40px;
-  border: 1px solid hsl(7, 20%, 60%);
+  border-radius: 4rem;
+  border: 0.1rem solid hsl(7, 20%, 60%);
 }
 .quantity-controls {
   position: absolute;
-  bottom: 90px;
-  left: 35px;
-  width: 100px;
-  height: 20px;
-  font-size: 8px;
+  bottom: 9rem;
+  left: 3.5rem;
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: space-evenly;
   color: white;
   align-items: center;
   background-color: hsl(14, 86%, 42%);
-  border-radius: 20px;
+  border-radius: 2rem;
 }
 
 .decrease-quantity-button,
 .increase-quantity-button,
 .close-button {
-  width: 15px;
-  height: 15px;
-  font-size: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
   background-color: hsl(14, 86%, 42%);
   font-weight: 600;
   color: white;
-  border-radius: 20px;
-  border: 1px solid white;
+  border-radius: 2rem;
+  border: 0.1rem solid white;
 }
 .close-button {
-  margin-left: 280px;
+  margin-left: 28rem;
 }
 
 /*CART SECTION*/
@@ -125,15 +154,15 @@ button {
 .cart-container {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  min-width: 300px;
-  height: 400px;
-  min-height: 300px;
-  max-height: 1500px;
-  margin-right: 20px;
-  padding: 20px;
+  max-width: 30rem;
+  min-width: 30rem;
+  height: 40rem;
+  min-height: 30rem;
+  max-height: 150rem;
+  margin-right: 2rem;
+  padding: 2rem;
   background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 1rem;
   align-items: center;
   overflow: auto;
 }
@@ -143,24 +172,24 @@ button {
 }
 .cart-items {
   display: flex;
-  min-height: 200px;
+  min-height: 20rem;
 }
 
 .confirm-order-button,
 .start-new-order-button {
   background-color: hsl(14, 86%, 42%);
   color: hsl(13, 31%, 94%);
-  border-radius: 40px;
+  border-radius: 4rem;
   border: none;
   font-weight: 400;
-  min-width: 200px;
-  height: 40px;
-  margin-top: 15px;
+  min-width: 20rem;
+  height: 4rem;
+  margin-top: 1.5rem;
 }
 
 .selected-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  border-bottom: 0.1rem solid #ccc;
+  padding: 1rem 0;
   list-style: none;
   flex-wrap: wrap;
 }
@@ -169,48 +198,48 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 .selected-item-price {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: hsl(7, 20%, 60%);
-  margin-left: 70px;
+  margin-left: 7rem;
 }
 
 .selected-item-quantity {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: hsl(14, 86%, 42%);
 }
 
 .total {
-  height: 50px;
+  height: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 .order-total {
-  font-size: 13px;
+  font-size: 1.3rem;
   align-items: center;
 }
 .total-amount {
-  margin-left: 50px;
+  margin-left: 5rem;
 }
 
 .carbon-neutral-box {
   display: flex;
   flex-direction: row;
   background-color: hsl(13, 31%, 94%);
-  border-radius: 5px;
-  height: 50px;
-  width: 200px;
+  border-radius: 0.5rem;
+  height: 5rem;
+  width: 20rem;
   align-items: center;
 }
 
 .carbon-neutral-text {
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .carbon-neutral-icon {
-  width: 15px;
-  margin-left: 15px;
+  width: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .cart-bottom-section {
@@ -224,10 +253,10 @@ button {
 }
 
 .image-empty-cart {
-  width: 100px;
+  width: 10rem;
 }
 .text-empty-cart {
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 /* MODAL */
@@ -243,13 +272,13 @@ button {
   justify-content: center;
 }
 .modal {
-  padding: 20px;
+  padding: 2rem;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
-  width: 300px;
-  min-height: 300px;
-  border-radius: 10px;
+  width: 30rem;
+  min-height: 30rem;
+  border-radius: 1rem;
   position: relative;
 }
 
@@ -257,22 +286,22 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100px;
+  height: 10rem;
 }
 .order-items {
   background-color: hsl(13, 31%, 94%);
-  min-height: 200px;
-  border-radius: 5px;
-  padding: 10px;
+  min-height: 20rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .icon-order-confirmed {
-  width: 20px;
+  width: 2rem;
 }
 .modal-enjoy-food-message {
-  font-size: 10px;
+  font-size: 1rem;
   color: hsl(7, 20%, 60%);
 }
 .modal-thumbnail {
-  width: 40px;
+  width: 4rem;
 }

@@ -8,6 +8,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [quantities, setQuantities] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+
   function setClose() {
     setIsOpen(false);
   }
